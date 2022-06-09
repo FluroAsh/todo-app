@@ -50,6 +50,8 @@ function Task({ text, todo }) {
     return <TaskForm edit={edit} onSubmit={handleEdit} />;
   }
 
+  // setEdit('');
+
   return (
     <>
       <div>{text}</div>

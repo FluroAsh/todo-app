@@ -30,7 +30,7 @@ export const reducer = (state, action) => {
       // convert back to stringified version
       // store in localtorage
       // update todo based on todo.id
-      console.log(action.data);
+      console.log(action.data.taskId, action.data.text);
       return;
     }
     default:
