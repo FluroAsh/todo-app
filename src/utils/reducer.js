@@ -18,10 +18,20 @@ export const reducer = (state, action) => {
       };
     }
     case 'editTodo': {
-      /**
-       * onSubmit 
-       */
-      break;
+      // Simple first pass
+      // 1. Create new todo
+      // 2. Remove old todo
+      // 3. Add new todo
+
+      // Alternatively... (more complex)
+      // Get todoid & localStorage todo based on key (todoId)
+      // convert LS todo to object
+      // replace text with new value
+      // convert back to stringified version
+      // store in localtorage
+      // update todo based on todo.id
+      console.log(action.data);
+      return;
     }
     default:
       return state;
