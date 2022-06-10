@@ -1,6 +1,7 @@
 ## Basic Todo App
 
 This application was built in React and serves to manage todo's, with full CRUD functionality. Todos are saved in localstorage.
+- [Deployed Heroku App](https://todo-app-at2022.herokuapp.com/)
 
 <div align="center">
 <img src="./public/readme-1.gif"/>
