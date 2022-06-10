@@ -4,7 +4,7 @@ import { faXmark, faPen } from '@fortawesome/free-solid-svg-icons';
 import { useGlobalState } from '../utils/stateContext';
 import TaskForm from './TaskForm';
 
-function Task({ text, todo }) {
+function Task({ todo }) {
   const initialState = {
     taskId: null,
     value: '',
@@ -25,26 +25,24 @@ function Task({ text, todo }) {
     });
   };
 
-  const handleEdit = () => {
-    // INPUT:
-    // 1. Todo to be removed
-    // 2.  Value (new value)
+  const handleEdit = (input) => {
+    const removedArr = [...todos].filter((item) => item.taskId !== todo.taskId);
+
     dispatch({
       type: 'editTodo',
-      data: { taskId: todo.taskId, text },
+      data: { removedArr, taskId: todo.taskId, input },
     });
     setEdit('');
   };
 
-  // console.log(edit, todo, todo.taskId);
-  // if there edit.id is not null then render a task form in the row
+  // if edit.id is not null then render a task form in the row
   if (edit.taskId) {
-    return <TaskForm edit={edit} onSubmit={handleEdit} />;
+    return <TaskForm value={todo.text} edit={edit} onSubmit={handleEdit} />;
   }
 
   return (
     <>
-      <div>{text}</div>
+      <div>{todo.text}</div>
       <div className="todo-row__icons">
         <FontAwesomeIcon
           icon={faPen}

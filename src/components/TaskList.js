@@ -4,7 +4,7 @@ import Task from './Task';
 import thinkingEmoji from '../images/thinking-emoji.png';
 /**
  * TODO:
- * - Add edit
+ * - Add focus with useRef for form elements
  * - Add complete/incomplete
  * - Final touches
  * 1. Add framer motion
@@ -12,8 +12,6 @@ import thinkingEmoji from '../images/thinking-emoji.png';
  */
 function TaskList() {
   const { store } = useGlobalState();
-  // TODO: Fix BUG... When submitting form (TaskForm), causes:
-  // - 'Uncaught TypeError: store is undefined'
   const { todos } = store;
 
   return todos.length > 0 ? (

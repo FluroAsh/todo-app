@@ -26,15 +26,13 @@ function TaskForm(props) {
       type: 'addTodo',
       data: newTodo,
     });
-
     setInput('');
   };
 
   const handleEditSubmit = (e) => {
     // send taskId & value to reducer to handle logic
     e.preventDefault();
-    console.log(input);
-    props.onSubmit(input);
+    props.onSubmit(input || props.value);
   };
 
   const handleChange = (e) => {

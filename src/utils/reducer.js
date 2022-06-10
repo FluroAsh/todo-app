@@ -18,21 +18,18 @@ export const reducer = (state, action) => {
       };
     }
     case 'editTodo': {
-      // -> Function currently just outputs the data from task component
-      // Simple first pass
-      // 1. Create new todo
-      // 2. Remove old todo
-      // 3. Add new todo
+      // get localStorage todo - parse into object from string
+      const lsTodo = JSON.parse(localStorage.getItem(action.data.taskId));
+      lsTodo.text = action.data.input;
 
-      // Alternatively... (more complex)
-      // Get todoid & localStorage todo based on key (todoId)
-      // convert LS todo to object
-      // replace text with new value
-      // convert back to stringified version
-      // store in localtorage
-      // update todo based on todo.id
-      console.log(action.data.taskId, action.data.text);
-      return;
+      // set edited localStorage todo
+      localStorage.setItem(action.data.taskId, JSON.stringify(lsTodo));
+
+      // return the altered list of todos (with the edited todo)
+      return {
+        ...state,
+        todos: [lsTodo, ...action.data.removedArr],
+      };
     }
     default:
       return state;
