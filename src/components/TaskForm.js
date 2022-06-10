@@ -33,7 +33,6 @@ function TaskForm(props) {
   const handleEditSubmit = (e) => {
     // send taskId & value to reducer to handle logic
     e.preventDefault();
-    console.log(input);
     props.onSubmit(input);
   };
 
