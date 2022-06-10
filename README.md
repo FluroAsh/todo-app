@@ -2,7 +2,9 @@
 
 This application was built in React and serves to manage todo's, with full CRUD functionality. Todos are saved in localstorage.
 
-<div align="center">![Readme1](./public/readme-1.gif)</div>
+<div align="center">
+<img src="./public/readme-1.gif"/>
+</div>
 
 ### Future Features
 
