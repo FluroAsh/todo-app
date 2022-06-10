@@ -20,6 +20,7 @@ const App = () => {
         <TaskForm />
         <TaskList />
       </div>
+      <span id="copyright">© Copyright 2022 | Ashley Thompson</span>
     </StateContext.Provider>
   );
 };
