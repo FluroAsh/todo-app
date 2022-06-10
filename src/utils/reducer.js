@@ -18,6 +18,7 @@ export const reducer = (state, action) => {
       };
     }
     case 'editTodo': {
+      // -> Function currently just outputs the data from task component
       // Simple first pass
       // 1. Create new todo
       // 2. Remove old todo

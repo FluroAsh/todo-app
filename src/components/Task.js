@@ -25,14 +25,6 @@ function Task({ text, todo }) {
     });
   };
 
-  const submitUpdate = () => {
-    // console.log(value, 'Test');
-    // setEdit(initialState);
-    // dispatch editTodo
-    // - which updates the current state todo & task in localStorage based on id
-    // set to null after submission
-  };
-
   const handleEdit = () => {
     // INPUT:
     // 1. Todo to be removed
@@ -49,8 +41,6 @@ function Task({ text, todo }) {
   if (edit.taskId) {
     return <TaskForm edit={edit} onSubmit={handleEdit} />;
   }
-
-  // setEdit('');
 
   return (
     <>

@@ -12,6 +12,8 @@ import thinkingEmoji from '../images/thinking-emoji.png';
  */
 function TaskList() {
   const { store } = useGlobalState();
+  // TODO: Fix BUG... When submitting form (TaskForm), causes:
+  // - 'Uncaught TypeError: store is undefined'
   const { todos } = store;
 
   return todos.length > 0 ? (
