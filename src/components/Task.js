@@ -17,11 +17,11 @@ function Task({ text, todo }) {
 
   const removeTodo = () => {
     // iterate over array of objects, return array with no removed todo
-    const removedArr = [...todos].filter((item) => item.taskId !== todo.id);
+    const removedArr = [...todos].filter((item) => item.taskId !== todo.taskId);
 
     dispatch({
       type: 'removeTodo',
-      data: { removedArr, taskId: todo.id },
+      data: { removedArr, taskId: todo.taskId },
     });
   };
 
@@ -36,7 +36,7 @@ function Task({ text, todo }) {
     setEdit('');
   };
 
-  console.log(edit, todo, todo.taskId);
+  // console.log(edit, todo, todo.taskId);
   // if there edit.id is not null then render a task form in the row
   if (edit.taskId) {
     return <TaskForm edit={edit} onSubmit={handleEdit} />;
