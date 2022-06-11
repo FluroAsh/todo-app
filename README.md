@@ -10,7 +10,7 @@ This application was built in React and serves to manage todo's, with full CRUD 
 ## Future Features
 
 - Back-end API integration for retrieving todos with user authentication
-- Note component for each todo for greater
+- Note component for each todo for better flexibility in jotting down ideas 
 
 ## Dependencies
 
